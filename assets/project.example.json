@@ -1,0 +1,69 @@
+{
+  "workflow_id": "YOUR_NUMERIC_WORKFLOW_ID",
+  "workflow_file": "work/workflow.private.json",
+  "base_url": "https://www.runninghub.ai",
+  "state_dir": "work/runninghub",
+  "instance_type": "plus",
+  "fps": 24,
+  "concurrency": 2,
+  "poll_seconds": 15,
+  "timeout_seconds": 2400,
+  "limits": {
+    "reference_total_seconds": 15,
+    "reference_min_seconds": 2,
+    "output_min_seconds": 4,
+    "output_max_seconds": 15
+  },
+  "character": "assets/character.png",
+  "bindings": {
+    "character": {
+      "node": "6",
+      "field": "image",
+      "class_type": "LoadImage"
+    },
+    "keyframe": {
+      "node": "35",
+      "field": "image",
+      "class_type": "LoadImage"
+    },
+    "rgb": {
+      "node": "79",
+      "field": "video",
+      "class_type": "VHS_LoadVideo"
+    },
+    "depth": {
+      "node": "80",
+      "field": "video",
+      "class_type": "VHS_LoadVideo"
+    },
+    "prompt": {
+      "node": "28",
+      "field": "prompt",
+      "class_type": "CR Prompt Text"
+    },
+    "duration": {
+      "node": "27",
+      "field": "value",
+      "class_type": "PrimitiveFloat"
+    }
+  },
+  "t8_conditioning_nodes": [
+    "7",
+    "14"
+  ],
+  "overrides": [],
+  "output_nodes": [
+    "21"
+  ],
+  "segments": [
+    {
+      "id": "S001",
+      "keyframe": "assets/keyframe-S001.png",
+      "rgb": "work/media/S001_rgb.mp4",
+      "depth": "work/media/S001_depth.mp4",
+      "prompt_file": "prompts/S001.txt",
+      "duration_seconds": 7.291666666666667,
+      "frame_count": 175
+    }
+  ]
+}

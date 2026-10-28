@@ -1,0 +1,4 @@
+interface:
+  display_name: "RunningHub 人物替换"
+  short_description: "通过 RunningHub 完成同步分段、参考图换人、高清精修和并发验收"
+  default_prompt: "使用 $runninghub-character-replacement 检查原片和工作流，生成人物替换素材，并按我的偏好并发生成和验收成片。"

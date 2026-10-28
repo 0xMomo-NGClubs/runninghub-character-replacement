@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is the replacement character in <Picture 1>, with {{identity_and_wardrobe}}.
+<Subject 2> is the environment and retained props in <Video 1>: {{environment_and_props}}.
+<Picture 2> is the target first frame of [Shot 1], showing <Subject 1> in the source segment's actual pose and location.
+<Video 1> is the COLOR source segment, defining action order, timing, camera and interactions.
+<Video 2> is the synchronized DEPTH visualization of that interval, providing supplementary posture and occlusion guidance.
+
+summary:
+[video editing + reference generation + keyframe completion] The target video is an edited version of <Video 1>. Replace the designated performer with <Subject 1>, starting from <Picture 2>, and retain <Subject 2>. Match the source segment's duration and the user's aspect ratio.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - retain identity, age, hair, body type, costume and shoes.
+<Subject 2> (appears in [Shot 1]): fully_preserved - retain scene, props, lighting and spatial relationships.
+<Picture 2> ([Shot 1] first frame): fully_preserved - follow its actual opening pose and composition.
+<Video 1> ([Shot 1]): partially_preserved - replace the person's appearance while following the actual local timeline.
+<Video 2> ([Shot 1]): attribute_transfer - use posture/occlusion without grayscale appearance, aspect distortion or interpolation artifacts.
+
+detailed_description:
+Photorealistic full-color footage with source-matched lighting.
+[Shot 1] Begin from <Picture 2>. <Subject 1> occupies the source performer's location, scale and orientation in <Subject 2>.
+{{describe_this_segment_in_playback_order_with_concrete_hand_foot_prop_actions}}
+Preserve the source rhythm and real grip changes. Keep face, hair and clothes stable through side and rear views. Prioritize <Picture 1> for appearance, <Picture 2> for opening composition, <Video 1> for timing, geometry and interaction; <Video 2> is supplementary. Preserve the intended person count, coherent limbs and original props. Finish on the source segment's final pose without adding a new action. Final audio is handled separately.
+
+overall_soundscape:
+Quiet source-appropriate ambience. No new dialogue. Discard generated audio when restoring the original track.
+
+non_diegetic_music:
+N/A
